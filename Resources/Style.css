@@ -1,0 +1,392 @@
+@keyframes shake1 {
+    10% {
+        transform: translate(-4px, -8px) rotate(-.5deg);
+    }
+    20% {
+        transform: translate(10px, 2px) rotate(-2.5deg);
+    }
+    30% {
+        transform: translate(-5px, -2px) rotate(2.5deg);
+    }
+    40% {
+        transform: translate(-4px, -2px) rotate(.5deg);
+    }
+    50% {
+        transform: translate(4px, -1px) rotate(-2.5deg);
+    }
+    60% {
+        transform: translate(1px, -9px) rotate(3.5deg);
+    }
+    70% {
+        transform: translate(-9px, 10px) rotate(.5deg);
+    }
+    80% {
+        transform: translate(-6px, 1px) rotate(1.5deg);
+    }
+    90% {
+        transform: translate(9px, 6px) rotate(-2.5deg);
+    }
+    0%,
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+}
+
+@keyframes shake2 {
+    10% {
+        transform: translate(-4px, -8px) rotate(-.5deg);
+    }
+    20% {
+        transform: translate(7px, 2px) rotate(-2.5deg);
+    }
+    30% {
+        transform: translate(-5px, -2px) rotate(2.5deg);
+    }
+    40% {
+        transform: translate(-4px, -2px) rotate(.5deg);
+    }
+    50% {
+        transform: translate(4px, -1px) rotate(-2.5deg);
+    }
+    60% {
+        transform: translate(1px, -6px) rotate(3.5deg);
+    }
+    70% {
+        transform: translate(-6px, 7px) rotate(.5deg);
+    }
+    80% {
+        transform: translate(2px, 1px) rotate(1.5deg);
+    }
+    90% {
+        transform: translate(7px, 6px) rotate(-2.5deg);
+    }
+    0%,
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+}
+
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none !important;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    margin: 0;
+    padding: 0;
+    font-family: "georgian", sans-serif;
+    font-size: 18px;
+    line-height: 1.618em;
+    background: #e8f5e9;
+    color: #424242;
+}
+
+a {
+    cursor: pointer;
+    transition: .25s all;
+}
+
+img {
+    width: 100%;
+}
+
+.container {
+    width: 100%;
+    display: inline-block;
+    margin: 0 auto;
+}
+
+#to-top {
+    position: fixed;
+    bot m: 30px;
+    right: -70px;
+    width: 2em;
+    line-height: 2em;
+    font-size: 2em;
+    text-align: center;
+    background: #2f80ed;
+    color: #fff;
+    opacity: .75;
+    border-radius: 50%;
+    transition: .25s all;
+}
+
+
+/* Header */
+
+header {
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    line-height: 0;
+    color: #fff;
+    background: rgba(25, 18, 28, .9);
+}
+
+header .container {
+    width: 100%;
+    margin: 0;
+    padding: 0 0 0 30px;
+    line-height: 70px;
+}
+
+header .logo {
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+header .header-left {
+    float: left;
+}
+
+header .header-left a {
+    color: #fff;
+}
+
+header .header-right {
+    float: right;
+    text-align: right;
+}
+
+header #menu-toggle {
+    position: absolute;
+    display: block;
+    width: 1.75em;
+    height: 1.75em;
+    top: 15px;
+    right: 30px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 50;
+    -webkit-touch-callout: none;
+}
+
+header #menu-toggle:checked~.scroll {
+    top: 70px;
+    left: 0;
+}
+
+header .hamburger {
+    margin-right: 30px;
+    font-size: 1.5em;
+}
+
+header .scroll {
+    position: absolute;
+    top: -280px;
+    left: 0;
+    z-index: 20;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    transition: .25s all;
+    background: rgba(34, 49, 52, .9);
+    border-top: solid 1px #888;
+}
+
+header .header-right a {
+    display: block;
+    margin: 0;
+    padding: 0 25px;
+    line-height: 70px;
+    text-align: left;
+    color: #fff;
+}
+
+header .header-right a:hover {
+    background: rgba(255, 255, 255, .5);
+}
+
+
+/* Main */
+
+#main {
+    padding-top: 20vh;
+    height: calc(100vh + 70px);
+    background: linear-gradient(65deg, #74b9ff 25%, #d63031 100%);
+    line-height: 100vh;
+    font-size: 1.25em;
+    text-align: center;
+    color: #fff;
+    width: 100%;
+}
+
+#main .intro {
+    margin: 0 30px;
+    line-height: 1.618em;
+}
+
+#main h1 {
+    margin: 50px 30px;
+    font-size: 50px;
+    letter-spacing: 1px;
+}
+
+#main p {
+    margin: 50px 30px;
+    font-size: 20px;
+    line-height: 35px;
+    letter-spacing: 0.2px;
+}
+
+#main .button {
+    padding: 20px;
+    background: #70EE9C;
+    color: #fff;
+    border-radius: 40px;
+    box-shadow: 0 2px 2px 2px rgba(0, 0, 0, .05);
+    transition: .3s all;
+}
+
+#main .button:hover {
+    background: #B5F44A;
+}
+
+
+/* Team */
+
+#team {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+#team .card {
+    display: inline-block;
+    padding: 30px;
+    margin: 20px;
+    vertical-align: top;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 2px 2px 2px rgba(0, 0, 0, .05);
+}
+
+#team img {
+    width: 80%;
+    max-width: 150px;
+    border-radius: 50%;
+    filter: grayscale(100%);
+    transition: .15s all;
+}
+
+#team .card:hover img {
+    filter: grayscale(0%);
+    animation: shake2 5s infinite;
+}
+
+#team h3 {
+    margin: 15px 0 5px;
+    font-size: 1.2em;
+}
+
+#team .about {
+    margin: 0;
+    color: #888;
+    line-height: 1em;
+}
+
+#team .button {
+    display: inline-block;
+    margin: 15px 0 15px;
+    padding: 5px 15px;
+    line-height: 35px;
+    background: #222;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 5px #666;
+    transition: .15s all;
+}
+
+#team .button:hover {
+    background: #444;
+}
+
+#team .button:active {
+    margin: 20px 0 10px;
+    box-shadow: none;
+}
+
+#team .medsos {
+    display: inline-block;
+    padding: 15px 15px;
+    text-align: right;
+    vertical-align: top;
+    font-size: 35px;
+    line-height: 35px;
+}
+
+#team .medsos a {
+    color: #444;
+}
+
+#team .medsos a:hover {
+    color: #2196f3;
+}
+
+
+/* materi */
+
+#materi {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+#materi .over {
+    margin-top: 50px;
+    padding: 50px;
+    background: #fff;
+    border-radius: 50px;
+    box-shadow: 0 2px 2px 2px rgba(0, 0, 0, .05);
+}
+
+#materi h2 {
+    padding: 30px 30px;
+    font-size: 30px;
+}
+
+#materi .fa-fw {
+    font-size: 90px;
+    line-height: 100px;
+    transition: .25s all;
+}
+
+#materi .html {
+    background: #f06529;
+    color: #fff;
+}
+
+#materi .css {
+    background: #2965f1;
+    color: #fff;
+}
+
+#materi .js {
+    background: #f0db4f;
+    color: #424242;
+}
+
+#materi .html,
+#materi .css,
+#materi .js {
+    display: inline-block;
+    padding: 30px;
+    margin: 25px;
+    vertical-align: top;
+    border-radius: 15px;
+    box-shadow: 0 2px 2px 2px rgba(0, 0, 0, .05);
+}
+
+#materi .html:hover .fa-fw,
+#materi .css:hover .fa-fw,
+#materi .js:hover .fa-fw {
+    font-size: 100px;
+}
